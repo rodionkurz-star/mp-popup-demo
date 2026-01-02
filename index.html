@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Popup Demo</title>
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --card:#11121a;
+      --text:#f2f3f5;
+      --muted:#b8bcc6;
+      --btn1:#f08a1a;
+      --btn2:#ffffff;
+      --btn2Text:#11121a;
+      --radius:14px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: transparent;
+      color: var(--text);
+    }
+    .wrap{
+      width: 100%;
+      padding: 18px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(17,18,26,.96), rgba(11,11,15,.96));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 18px;
+      max-width: 720px;
+      margin: 0 auto;
+      box-shadow: 0 18px 55px rgba(0,0,0,.45);
+    }
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom: 8px;
+    }
+    .badge{
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.08);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      letter-spacing:.5px;
+    }
+    h1{
+      font-size: 18px;
+      margin: 0;
+      line-height: 1.2;
+    }
+    p{
+      margin: 10px 0 0 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 14px;
+    }
+    .buttons{
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    a.btn{
+      display:block;
+      text-align:center;
+      padding: 14px 16px;
+      border-radius: 10px;
+      text-decoration:none;
+      font-weight: 700;
+      letter-spacing:.2px;
+      border: 1px solid rgba(255,255,255,.10);
+      user-select:none;
+    }
+    a.primary{
+      background: var(--btn1);
+      color: #11121a;
+      border-color: rgba(0,0,0,.15);
+    }
+    a.secondary{
+      background: var(--btn2);
+      color: var(--btn2Text);
+    }
+    .fine{
+      margin-top: 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,.55);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card" role="dialog" aria-label="Info">
+      <div class="logo">
+        <div class="badge">DEMO</div>
+        <div>
+          <h1>Kurze Info im Rundgang</h1>
+          <p>Hier kannst du zwei klare Aktionen anbieten, genau wie im Beispiel, Links sind Platzhalter.</p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a class="btn primary" href="https://example.com" target="_blank" rel="noopener">Button 1, Externer Link</a>
+        <a class="btn secondary" href="https://example.org" target="_blank" rel="noopener">Button 2, Zweiter Link</a>
+      </div>
+
+      <div class="fine">
+        Tipp: Später ersetzt du nur die URLs und die Texte, das Layout bleibt gleich.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
